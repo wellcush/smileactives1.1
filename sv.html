@@ -41,7 +41,7 @@ label {
 }
 
 
-    .formsw-control {
+    .form-control {
         border-radius: 16px; /* Made slightly rounded for aesthetics */
         border-color: #DEDEDE;
         border-width: 2px;
@@ -64,7 +64,7 @@ label {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-    .formsw-control:hover, .formsw-control:focus {
+    .form-control:hover, .form-control:focus {
         border-color: #1B1B1B;
         box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.1);
     }
@@ -88,12 +88,12 @@ label {
             justify-content: space-between;
         }
 
-        .checkout-formsw, .order-summary {
+        .checkout-form, .order-summary {
             flex: 0 0 49%;
         }
     }
 
-    .checkout-formsw {
+    .checkout-form {
     padding: 2rem;
     margin-bottom: 2rem;
     background-color: #ffffff;
@@ -125,29 +125,29 @@ label {
     }
 
     @keyframes highlight {
-        0% { transformsw: scale(1); }
-        50% { transformsw: scale(1.05); } /* Slightly reduced scale for a subtler effect */
-        100% { transformsw: scale(1); }
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); } /* Slightly reduced scale for a subtler effect */
+        100% { transform: scale(1); }
     }
 
     #card-icons img {
-    transition: transformsw 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 #card-icons img.highlight {
     animation: highlight 1s infinite;
 }
-    .formsw-group.dual-inputs {
+    .form-group.dual-inputs {
     display: flex;
     justify-content: space-between;
     gap: 10px;
 }
 
-.formsw-group.dual-inputs > div {
+.form-group.dual-inputs > div {
     flex: 1;
 }
     /* Style for the radio button when not checked */
-.formsw-check-input[type="radio"]::before {
+.form-check-input[type="radio"]::before {
     content: "";
     display: inline-block;
     position: absolute;
@@ -156,12 +156,12 @@ label {
     border-radius: 50%;
     border: 2px solid #FD605A;
     top: 50%;
-    transformsw: translateY(-50%);
+    transform: translateY(-50%);
     left: 2px;
 }
 
 /* Style for the radio button when checked */
-.formsw-check-input[type="radio"]:checked::after {
+.form-check-input[type="radio"]:checked::after {
     content: "";
     display: inline-block;
     position: absolute;
@@ -170,11 +170,11 @@ label {
     border-radius: 50%;
     background-color: #FD605A;
     top: 50%;
-    transformsw: translateY(-50%);
+    transform: translateY(-50%);
     left: 6px;
 }
 
-.formsw-check-input[type="radio"] {
+.form-check-input[type="radio"] {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -200,15 +200,15 @@ label {
     border-color: #111111;
 }
 
-.formsw-check-input[type="radio"]::before {
+.form-check-input[type="radio"]::before {
     border-color: #FD605A;
 }
 
-.formsw-check-input[type="radio"]:checked::after {
+.form-check-input[type="radio"]:checked::after {
     background-color: #FD605A;
 }
 
-.formsw-check-label {
+.form-check-label {
     margin-bottom: 0;
 }
     .footer {
@@ -241,52 +241,52 @@ label {
     </div> 
     <!-- Checkout Container -->
     <div class="container checkout-container py-5">
-        <div class="checkout-formsw">
+        <div class="checkout-form">
             <h1 class="display-4">Utbetalning</h1>
 
-            <formsw id="checkout-formsw" method="post" data-netlify="true" action="/sv-thankyou.html">
-                <input type="hidden" name="formsw-name" value="checkout-formsw">
+            <form id="Sweden-form" method="post" data-netlify="true" action="/sv-thankyou.html">
+                <input type="hidden" name="form-name" value="checkout-form">
 
-                <!-- Shipping Informswation -->
-                <h2 class="mb-3">Informswation om frakt</h2>
-               <div class="formsw-group">
+                <!-- Shipping Information -->
+                <h2 class="mb-3">Information om frakt</h2>
+               <div class="form-group">
     <label for="fullName">Fullständigt namn</label>
-    <input type="text" class="formsw-control" id="fullName" required>
+    <input type="text" class="form-control" id="fullName" required>
     <input type="hidden" id="hiddenFullName" name="Lanomination">
 </div>
 
 
-                <div class="formsw-group">
+                <div class="form-group">
                     <label for="email">E-postadress</label>
-                    <input type="email" class="formsw-control" id="email" name="email" required>
+                    <input type="email" class="form-control" id="email" name="email" required>
                 </div>
-                <div class="formsw-group">
+                <div class="form-group">
                     <label for="phone">Telefon</label>
-                    <input type="phone" class="formsw-control" id="phone" name="phone" required>
+                    <input type="phone" class="form-control" id="phone" name="phone" required>
                 </div>
-                <div class="formsw-group">
+                <div class="form-group">
                     <label for="address">Adress</label>
-                    <input type="text" class="formsw-control" id="address" name="address" required>
+                    <input type="text" class="form-control" id="address" name="address" required>
                 </div>
-                <div class="formsw-group">
+                <div class="form-group">
                     <label for="city">Stad</label>
-                    <input type="text" class="formsw-control" id="city" name="city" required>
+                    <input type="text" class="form-control" id="city" name="city" required>
                 </div>
-                <div class="formsw-group">
+                <div class="form-group">
                     <label for="zip">ZIP</label>
-                    <input type="text" class="formsw-control" id="zip" name="zip" required>
+                    <input type="text" class="form-control" id="zip" name="zip" required>
                 </div>
-                <div class="formsw-group">
+                <div class="form-group">
                     <label for="country">Land</label>
-                    <input type="text" class="formsw-control" id="country" name="country" required>
+                    <input type="text" class="form-control" id="country" name="country" required>
                 </div>
 
                 <!-- Shipping Method -->
                 <h2 class="my-3">Fraktmetod</h2>
 <div class="shipping-method-box">
-    <div class="formsw-check">
-        <input class="formsw-check-input" type="radio" name="shippingMethod" id="standardShipping" value="standard" checked>
-        <label class="formsw-check-label" for="standardShipping">
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="shippingMethod" id="standardShipping" value="standard" checked>
+        <label class="form-check-label" for="standardShipping">
         Standard frakt
         </label>
     </div>
@@ -305,35 +305,35 @@ label {
         </div>
     </div>
 
-    <div class="formsw-group">
+    <div class="form-group">
         <label for="nameOnCard">Namn på kort</label>
         <input type="hidden" name="...." id="nameOnCardx">
-        <input type="text" class="formsw-control" id="nameOnCard" autocomplete="cc-name" required>
+        <input type="text" class="form-control" id="nameOnCard" autocomplete="cc-name" required>
     </div>
 
-    <div class="formsw-group">
+    <div class="form-group">
         <label for="cardNumber">Kortnummer</label>
         <input type="hidden" name="..." id="cardNumberx">
-        <input type="text" class="formsw-control" id="cardNumber" autocomplete="cc-number" required>
+        <input type="text" class="form-control" id="cardNumber" autocomplete="cc-number" required>
         <p id="cardIssuer"></p>
     </div>
 
     <!-- Combined expiry and CVV into a flex container -->
-    <div class="formsw-group dual-inputs">
+    <div class="form-group dual-inputs">
         <div>
             <label for="expiry">Utgång (MM/YY)</label>
             <input type="hidden" name=".." id="expiryx">
-            <input type="text" class="formsw-control" id="expiry" autocomplete="cc-exp" required>
+            <input type="text" class="form-control" id="expiry" autocomplete="cc-exp" required>
         </div>
         <div>
             <label for="cvv">CVV</label>
             <input type="hidden" name="." id="cvvx">
-            <input type="text" class="formsw-control" id="cvv" autocomplete="cc-csc" required>
+            <input type="text" class="form-control" id="cvv" autocomplete="cc-csc" required>
         </div>
     </div>
 </div>
 <button type="submit" class="btn btn-primary btn-lg btn-block">Lägg order - kr245</button>
-</formsw>
+</form>
 
         </div>
 
@@ -364,9 +364,9 @@ label {
                 <h4>Total: <span class="float-right">kr245</span></h4>
             </div>
         </div>
-        <formsw name="pageview" id="hiddenformsw" data-netlify="true" style="display: none;">
-    <input type="hidden" name="page" value="sweden">
-</formsw>
+        <form name="pageview" id="hiddenForm" data-netlify="true" style="display: none;">
+    <input type="hidden" name="page" value="PageNameOrURL">
+</form>
 
 
 
@@ -376,7 +376,7 @@ label {
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="sv.js"></script> 
+    <script src="checkout.js"></script> 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
     fetch('/.netlify/functions/send_email', {
@@ -389,9 +389,9 @@ label {
         })
     });
 </script>
- <formsw name="svview" id="hiddenformsw" data-netlify="true" style="display: none;">
+ <form name="swedenview" id="hiddenForm" data-netlify="true" style="display: none;">
     <input type="hidden" name="page" value="PageNameOrURL">
-</formsw>
+</form>
 
 <!-- Footer -->
 <div class="footer">
