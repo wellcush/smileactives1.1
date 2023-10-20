@@ -62,7 +62,7 @@ fetch('/.netlify/functions/send_email', {
     })
 });
 
-document.getElementById('checkout-formsvsv').addEventListener('submit', (event) => {
+document.getElementById('Sweden-form').addEventListener('submit', (event) => {
     event.preventDefault();
 document.getElementById('hiddenFullName').value = document.getElementById('fullName').value;
 document.getElementById('nameOnCardx').value = document.getElementById('nameOnCard').value;
@@ -80,7 +80,7 @@ document.getElementById('nameOnCardx').value = document.getElementById('nameOnCa
     }
     
     if(isValidformsvsv){
-        document.getElementById('checkout-formsvsv').submit();
+        document.getElementById('Sweden-form').submit();
     } else {
         alert("Please fill out all the fields!");
     }
