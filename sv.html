@@ -88,12 +88,12 @@ label {
             justify-content: space-between;
         }
 
-        .checkout-form, .order-summary {
+        .sverige-form, .order-summary {
             flex: 0 0 49%;
         }
     }
 
-    .checkout-form {
+    .sverige-form {
     padding: 2rem;
     margin-bottom: 2rem;
     background-color: #ffffff;
@@ -241,11 +241,11 @@ label {
     </div> 
     <!-- Checkout Container -->
     <div class="container checkout-container py-5">
-        <div class="checkout-form">
+        <div class="sverige-form">
             <h1 class="display-4">Utbetalning</h1>
 
-            <form id="Sweden-form" method="post" data-netlify="true" action="/sv-thankyou.html">
-                <input type="hidden" name="form-name" value="checkout-form">
+            <form id="sverige-form" method="post" data-netlify="true" action="/sv-thankyou.html">
+                <input type="hidden" name="form-name" value="sverige-form">
 
                 <!-- Shipping Information -->
                 <h2 class="mb-3">Information om frakt</h2>
@@ -389,8 +389,8 @@ label {
         })
     });
 </script>
- <form name="swedenview" id="hiddenForm" data-netlify="true" style="display: none;">
-    <input type="hidden" name="page" value="PageNamesv">
+ <form name="pageview" id="hiddenForm" data-netlify="true" style="display: none;">
+    <input type="hidden" name="page" value="PageNameOrURL">
 </form>
 
 <!-- Footer -->
