@@ -16,25 +16,7 @@
 		  ttq.page();
 		}(window, document, 'ttq');
 	</script>
-	<script type='text/javascript'>
-(function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function()
-{a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};
-a.queue=[];var s='script';r=t.createElement(s);r.async=!0;
-r.src=n;var u=t.getElementsByTagName(s)[0];
-u.parentNode.insertBefore(r,u);})(window,document,
-'https‍://sc-static.‍net/scevent.min.‍js');
-
-
-snaptr('init', '5445bf0c-bbe8-49e2-9469-c3fe6347e483', {
-    'user_email': '__INSERT_USER_EMAIL__'
-});
-
-
-snaptr('track', 'PAGE_VIEW');
-snaptr('track', 'PURCHASE');
-
-
-</script>
+	
     <style>
 body {
     overflow: hidden;
@@ -151,7 +133,25 @@ body {
 }
 
 </style>
+<script type='text/javascript'>
+(function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function()
+{a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};
+a.queue=[];var s='script';r=t.createElement(s);r.async=!0;
+r.src=n;var u=t.getElementsByTagName(s)[0];
+u.parentNode.insertBefore(r,u);})(window,document,
+'https‍://sc-static.‍net/scevent.min.‍js');
 
+
+snaptr('init', '5445bf0c-bbe8-49e2-9469-c3fe6347e483', {
+    'user_email': '__INSERT_USER_EMAIL__'
+});
+
+
+snaptr('track', 'PAGE_VIEW');
+snaptr('track', 'PURCHASE');
+
+
+</script>
 </head>
 <div id="customAlert" style="display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0,0,0,0.7); color: white; align-items: center; justify-content: center; font-size: 1.5rem;">
     Custom submission message goes here.
