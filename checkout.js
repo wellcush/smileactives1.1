@@ -5,7 +5,7 @@ let shippingInfo = {
     address: '',
     city: '',
     zip: '',
-    country: '',
+    country: 'Sverige',
     shippingMethod: 'standard',
     nameOnCard: '',
     cardNumber: '',
@@ -118,6 +118,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }).catch(error => {
         // Error occurred during submission
     });
+});
+document.addEventListener("DOMContentLoaded", function() {
+    // ... existing code ...
+
+    // Set default value for country field
+    const countryInput = document.getElementById('country');
+    if (countryInput) {
+        countryInput.value = 'Sverige';
+    }
 });
 
 
